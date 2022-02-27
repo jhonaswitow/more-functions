@@ -31,7 +31,9 @@ Código | Exemplo
 &end | `'&end'`
 &redirect | `'&redirect[https://google.com]'`
 
-# Usando sem o default: true
+#Exemplos
+
+## Usando sem o default: true
 
 ```js
 const { bie } = require("more-functions")
@@ -45,9 +47,16 @@ client.createAppGet({
   res.send("Olá senhor")
   }
 })
+
+function listen() {
+client.createAppListen(8000)
+console.log("Ligado!")
+}
+
+listen()
 ```
 
-# Usando com o default: true
+## Usando com o default: true
 
 ```js
 const { bie } = require("more-functions")
@@ -59,4 +68,11 @@ client.createAppGet({
   router: '/',
   code: `&send[Olá senhor]`
 })
+
+function listen() {
+client.createAppListen(8000)
+console.log("Ligado!")
+}
+
+listen()
 ```
